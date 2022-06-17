@@ -1,2 +1,35 @@
 @api= http://localhost:3000/tasks
+
 GET {{api}}
+
+####
+
+GET {{api}}/2
+###
+
+GET {{api}}/count
+
+#####
+
+POST {{api}}
+Content-Type: application/json
+
+{
+  "title": "I want to create a new task",
+  "description": "using the API"
+} 
+
+###
+
+DELETE {{api}}/6
+
+###
+
+
+PUT {{api}}/3
+content-type: application/json
+
+{
+  "title": "update task",
+  "description": "a vers a vrs"
+}
