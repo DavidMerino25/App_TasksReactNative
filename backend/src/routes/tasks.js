@@ -1,7 +1,7 @@
-import { Router } from "express";
-import {getTasks} from "../controllers/tasks";
+import { Router } from 'express';
+import {getTasks} from '../controllers/tasks';
 const router = Router();
-router.get('/tasks',getTasks)
+router.get('/tasks', getTasks)
 
 router.get('/tasks/:count')
 

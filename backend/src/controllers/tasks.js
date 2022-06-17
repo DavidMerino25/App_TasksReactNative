@@ -1,3 +1,3 @@
-const getTasks = (req, res) => {
-  res.send('get task');
+export const getTasks = (req, res) => {
+  res.send('hello wordl');
     }
