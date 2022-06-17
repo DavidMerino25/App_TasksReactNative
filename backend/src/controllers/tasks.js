@@ -4,7 +4,6 @@ export const getTasks = async (req, res) => {
   const connection = await connect();
   const [rows] = await connection.query('SELECT * FROM tasks')
   res.json(rows);
-  console.log('bice');
 }
 
 export const getTask = async (req, res) => {
@@ -32,15 +31,13 @@ export const saveTask = async (req, res) => {
 export const deleteTask = async (req, res) => {
   const connection = await connect();
   const result = await connection.query('DELETE FROM tasks WHERE id = ?', [req.params.id])
-  console.log(result)
   res.sendStatus(204);
 }
 
 export const updateTask = async (req, res) => {
   const coneection = await connect();
-  const results = await coneection.query('UPDATE tasks SET ? WHERE id = ?', [
+ await coneection.query('UPDATE tasks SET ? WHERE id = ?', [
     req.body, 
     req.params.id]);
-  console.log(results);
   res.sendStatus(204) // 204 No Content
 }
